@@ -1,7 +1,83 @@
 .container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    background-color: rgb(221, 175, 175);
+    color: darkred;
+    font-size: 2em;
+    width: 19em;
+    min-height: 1em;
+    border: .08em solid darkred;
+    border-radius: .2em;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    outline: none;
+}
+
+.container:focus{
+    border-color: rgb(239, 99, 99);
+}
+
+.value{
+    flex-grow: 1;
+}
+
+.clear-btn{
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1em;
+    color: darkred;
+    cursor: pointer;
+    outline: none;
+}
+.clear-btn:focus,
+.clear-btn:hover{
+    color: rgb(71, 0, 0);
+}
+
+.divider{
+    background-color: darkred;
+    align-self: stretch;
+    width: .05em;
+}
+
+.caret{
+    translate: 0 25%;
+    border: .3em solid transparent;
+    border-top-color: darkred;
+}
+
+.options{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 9em;
+    overflow-y: scroll;
+    border: .09em solid darkred;
+    border-radius: .2em;
+    width: 100%;
+    left: 0;
+    top: calc(100% + .2em);
+    background-color: rgb(221, 175, 175);
+    z-index: 100;
+    display: none;
+}
+.options.show{
+    display: block;
+}
+
+.option{
+    padding: .2em .5em;
+    cursor: pointer;
+}
+.option.highlighted{
     background-color: darkred;
     color: white;
-    font-size: 3rem;
-    width: 20rem;
-    height: 50rem;
+}
+.option.selected{
+    background-color: darkred;
 }
